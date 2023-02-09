@@ -1,16 +1,16 @@
-import { Section } from 'components';
 import PropTypes from 'prop-types';
 
 export function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
-    <Section>
-      <h2>Statistics</h2>
-      <div>Good: {good}</div>
-      <div>Neutral: {neutral}</div>
-      <div>Bad: {bad}</div>
-      <div>Total: {total}</div>
-      <div>Positive Feedback: {positivePercentage}%</div>
-    </Section>
+    <ul>
+      <li good={good}>Good: {good}</li>
+      <li neutral={neutral}>Neutral: {neutral}</li>
+      <li bad={bad}>Bad: {bad}</li>
+      <li total={total}>Total: {total}</li>
+      <li positivePercentage={positivePercentage}>
+        Positive Feedback: {positivePercentage}%
+      </li>
+    </ul>
   );
 }
 
