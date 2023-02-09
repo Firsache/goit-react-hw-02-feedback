@@ -1,12 +1,23 @@
-import { Section } from 'components';
+import PropTypes from 'prop-types';
 
-export function FeedbackOptions() {
+export function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <Section>
-      <h2>Please leave your feedback</h2>
-      <button>Good</button>
-      <button>Neutral</button>
-      <button>Bad</button>
-    </Section>
+    <>
+      {options.map(option => (
+        <button
+          key={option}
+          type="button"
+          value={option}
+          onClick={onLeaveFeedback}
+        >
+          {option}
+        </button>
+      ))}
+    </>
   );
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
