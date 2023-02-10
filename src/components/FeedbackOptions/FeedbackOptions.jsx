@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
+import { Wrapper, Button } from './FeedbackOptions.styled';
 
 export function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <>
+    <Wrapper>
       {options.map(option => (
-        <button
+        <Button
           key={option}
           type="button"
           value={option}
           onClick={() => onLeaveFeedback(option)}
         >
           {option}
-        </button>
+        </Button>
       ))}
-    </>
+    </Wrapper>
   );
 }
 
