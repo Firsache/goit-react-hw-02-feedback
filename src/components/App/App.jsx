@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import { Section, FeedbackOptions, Statistics, Notification } from 'components';
+import { GlobalStyles } from 'styles/globalStyles.styled';
+import { Container } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -27,7 +29,7 @@ export class App extends Component {
     let total = this.countTotalFeedback();
 
     return (
-      <>
+      <Container>
         <Section title="Please leave your feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
@@ -44,10 +46,11 @@ export class App extends Component {
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
           ) : (
-            <Notification message="There is no feedback" />
+            <Notification message="There is no feedback yet..." />
           )}
         </Section>
-      </>
+        <GlobalStyles />
+      </Container>
     );
   }
 }
