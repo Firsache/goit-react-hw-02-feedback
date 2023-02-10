@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 export function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
     <ul>
-      <li good={good}>Good: {good}</li>
-      <li neutral={neutral}>Neutral: {neutral}</li>
-      <li bad={bad}>Bad: {bad}</li>
-      <li total={total}>Total: {total}</li>
-      <li positivePercentage={positivePercentage}>
-        Positive Feedback: {positivePercentage}%
-      </li>
+      <li>Good: {good}</li>
+      <li>Neutral: {neutral}</li>
+      <li>Bad: {bad}</li>
+      <li>Total: {total}</li>
+      <li>Positive Feedback: {positivePercentage}%</li>
     </ul>
   );
 }
