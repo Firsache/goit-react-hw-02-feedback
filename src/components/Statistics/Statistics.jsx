@@ -8,7 +8,7 @@ export function Statistics({ good, neutral, bad, total, positivePercentage }) {
       <Item>Neutral: {neutral}</Item>
       <Item>Bad: {bad}</Item>
       <Item>Total: {total}</Item>
-      <Item>Positive Feedback: {positivePercentage}%</Item>
+      <Item>Positive feedback: {positivePercentage}%</Item>
     </List>
   );
 }
