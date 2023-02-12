@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colorPicker } from 'components/colorPicker';
+import { colorPicker } from 'components/helpers/colorPicker';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -13,11 +13,10 @@ export const Button = styled.button`
   width: 120px;
   padding: 10px 5px;
   border-radius: 5px;
-  background-color: ${({ value }) => colorPicker(value)};
+  background-color: ${colorPicker};
 
   text-transform: uppercase;
   font-size: 16px;
-  /* font-weight: 600; */
   letter-spacing: 1.2px;
   color: #ffffff;
   transition: box-shadow 200ms ease-in, transform 200ms ease-in;

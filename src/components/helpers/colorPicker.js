@@ -1,5 +1,5 @@
-export const colorPicker = option => {
-  switch (option) {
+export const colorPicker = ({ colorKey }) => {
+  switch (colorKey) {
     case 'good':
       return 'hsl(127deg 65% 50% / 70%)';
     case 'neutral':

@@ -8,7 +8,7 @@ export function FeedbackOptions({ options, onLeaveFeedback }) {
         <Button
           key={option}
           type="button"
-          value={option}
+          colorKey={option}
           onClick={() => onLeaveFeedback(option)}
         >
           {option}
